@@ -236,12 +236,9 @@ This simple example shows how to use this package to build a sparse AD-Tree and 
 
 The result of this program is:
 
-`
+~~~
 Q: [0, 1] C: 0
-
 Q: [1, 1] C: 2
-
 Q: [2, 1] C: 1
-
 Q: [3, 1] C: 1
-`
+~~~
