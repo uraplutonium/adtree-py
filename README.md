@@ -61,7 +61,7 @@ There are one global function and two classes as interface:
 
 This function is used after importing this module, before creating any ADNode, to declare which Record module the ADTree module is using.
 
-** 1. Class ADNode:**
+#### Class ADNode #
 
 * **__init__(startAttributeNum, recordNums)**
 
@@ -76,7 +76,7 @@ This function returns the counting of this AD-node.
 
 This function returns the vary node child of this AD-node, which represents attribute number of “attributeNum”.
 
-Class VaryNode:
+#### Class VaryNode #
 
 * **__init__(attributeNum, recordNums)**
 
@@ -130,7 +130,7 @@ There are one global function and one class as interface:
 importModules(recordModule, ADTreeModule)
 This function is used after importing this module, before creating any contingency table, to declare which Record module and ADTree module the ContingencyTable module is using.
 
-**1. Class ContingencyTable**
+#### Class ContingencyTable #
 
 * **__init__(attributeList, ADN)**
 
