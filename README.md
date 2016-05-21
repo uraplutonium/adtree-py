@@ -8,7 +8,7 @@ Note: The name of the folder where all python files are, must not be â€œadtreeâ€
 
 ## 2. Record modules #
 
-Record modules are the only form of original dataset the ADTree modules accept. It is a two-dimensional matrix, in which all numbers are greater than 0. In each row, there stores one record.
+Record modules are the only form of original dataset the ADTree modules accept. It is a two-dimensional matrix, in which all numbers are greater than zero. In each row, there stores one record.
 
 The reason for using a Record module instead of a list directly, is that the dataset might be too large to put in memory. As a result, the original dataset might be stored in file system or database. Using a Record module to provide query service to build AD-Tree and contingency table could make this package fit different formats of dataset, only if the interface is implemented.
 
