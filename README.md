@@ -208,11 +208,11 @@ This simple example shows how to use this package to build a sparse AD-Tree and 
 	import ArrayRecord as Record
 	import SparseADTree as ADTree
 	import IteratedTreeContingencyTable as ContingencyTable
-	
+
 	arityList = [4, 3, 2, 5]
 	recordsTable = [[1, 2, 1, 4], [2, 2, 2, 5], [1, 3, 1, 1], [4, 1, 2, 1],
 					[2, 2, 1, 4], [4, 3, 2, 5], [3, 1, 1, 1], [1, 1, 2, 5]]
-	
+
 	if __name__ == '__main__':
 		# import the original dataset to the record module
 		Record.initRecord([arityList, recordsTable])
