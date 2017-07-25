@@ -185,36 +185,36 @@ This simple example shows how to use this package to build a sparse AD-Tree and 
 import ArrayRecord as Record
 import SparseADTree as ADTree
 import IteratedTreeContingencyTable as ContingencyTable
-	
+
 arityList = [4, 3, 2, 5]
 recordsTable = [[1, 2, 1, 4], [2, 2, 2, 5], [1, 3, 1, 1], [4, 1, 2, 1],
-[2, 2, 1, 4], [4, 3, 2, 5], [3, 1, 1, 1], [1, 1, 2, 5]]
-	
+                [2, 2, 1, 4], [4, 3, 2, 5], [3, 1, 1, 1], [1, 1, 2, 5]]
+    
 if __name__ == '__main__':
-	# import the original dataset to the record module
-	Record.initRecord([arityList, recordsTable])
+    # import the original dataset to the record module
+    Record.initRecord([arityList, recordsTable])
 
-	# declare that the ADTree module uses ArrayRecord module as dataset
-	ADTree.importModules('ArrayRecord')
+    # declare that the ADTree module uses ArrayRecord module as dataset
+    ADTree.importModules('ArrayRecord')
 
-	# declare that the ContingencyTable uses ArrayRecord and SparsADTree modules
-	ContingencyTable.importModules('ArrayRecord', 'SparseADTree')
+    # declare that the ContingencyTable uses ArrayRecord and SparsADTree modules
+    ContingencyTable.importModules('ArrayRecord', 'SparseADTree')
 
-	# initialise recordNums containing all numbers in the dataset
-	recordNums = [num for num in range(1, Record.recordsLength+1)]
+    # initialise recordNums containing all numbers in the dataset
+    recordNums = [num for num in range(1, Record.recordsLength+1)]
 
-	# build an AD-Tree with attribute list starts from the first attribute,
-	# and for all the records
-	adtree = ADTree.ADNode(1, recordNums)
+    # build an AD-Tree with attribute list starts from the first attribute,
+    # and for all the records
+    adtree = ADTree.ADNode(1, recordNums)
 
-	# build a contingency table for the first and third attributes
-	contab = ContingencyTable.ContingencyTable([1, 3], adtree)
+    # build a contingency table for the first and third attributes
+    contab = ContingencyTable.ContingencyTable([1, 3], adtree)
 
-	# query for [1, 1], [2, 1], [3, 1] and [4, 1], and print on screen
-	for i in range(4):
-		query = [i+1, 1]
-		count = contab.getCount(query)
-		print('Q:', query, 'C:', count)
+    # query for [1, 1], [2, 1], [3, 1] and [4, 1], and print on screen
+    for i in range(4):
+        query = [i+1, 1]
+        count = contab.getCount(query)
+        print('Q:', query, 'C:', count)
 ```
 
 The result of this program is:
