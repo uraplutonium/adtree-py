@@ -69,8 +69,9 @@ if __name__ == '__main__':
     adtree = ADTree.ADNode(1, recordNums)
     
     # build a contingency table for the first and third attributes
-    path = '/media/uraplutonium/Cardboard/Workspace/AD-Tree-2014/src/package/profile/'
-
+    contab = ContingencyTable.ContingencyTable([1, 3], adtree)
+    
+#    path = '/media/uraplutonium/Cardboard/Workspace/AD-Tree-2014/src/package/profile/'
 #    stat = pstats.Stats(path+'none.prof')
 #    for i in range(10000):
 #        profile.run('contab = ContingencyTable.ContingencyTable([1, 3], adtree)', path+'prof.prof')
@@ -79,14 +80,9 @@ if __name__ == '__main__':
 #    stat = pstats.Stats(path+'prof.prof')
 #    stat.sort_stats("time").print_stats()
 
-
-    
-    for i in range(10000):
-        contab = ContingencyTable.ContingencyTable([1, 3], adtree)
-    
     # query for [1, 1], [2, 1], [3, 1] and [4, 1], and print on screen
     for i in range(4):
-        query = [i, 1]
+        query = [i+1, 1]
         count = contab.getCount(query)
         print('Q:', query, 'C:', count)
 

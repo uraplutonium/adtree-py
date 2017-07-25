@@ -8,7 +8,7 @@ from FileRecord import *
 import cProfile
 import MyPStats as pstats
 
-profPath = '/media/uraplutonium/Cardboard/Workspace/AD-Tree-2014/'
+profPath = '/media/uraplutonium/Workstation/Workspace/adtree-py/att/'
 testData = None
 testNet = None
 
@@ -173,7 +173,7 @@ def testBIC(dataPath, contabName, l_init, l_getCount):
     #ctFile = open(profPath + 'BIC_profile.csv', 'a')
     #ctFile.writelines(str(contabName) + ',' + str(BIC_ncalls) + ',' + str(BIC_cumtime) + ',' + str(CT_ncalls) + ',' + str(CT_cumtime) + ',' + str(COUNT_ncalls) + ',' + str(COUNT_cumtime) + '\n')
     #ctFile.close()
-                
+
 if __name__ == '__main__':
     #testEvaFunctions()
     #testFDNet()
@@ -183,9 +183,10 @@ if __name__ == '__main__':
     #testADTree()
     #testFileRecord()
 
-    irisDataPath = '/media/uraplutonium/Cardboard/Workspace/AD-Tree-2014/src/iris_labelled.csv'
-    stumbleDataPath = '/media/uraplutonium/Cardboard/Workspace/AD-Tree-2014/src/stumbleupon.csv'
-    KDDDataPath = '/media/uraplutonium/Cardboard/Workspace/AD-Tree-2014/src/kdd10000DM.csv'
+    irisDataPath = '/media/uraplutonium/Workstation/Workspace/adtree-py/src/iris_labelled.csv'
+    stumbleDataPath = '/media/uraplutonium/Workstation/Workspace/adtree-py/src/stumbleupon.csv'
+    KDDDataPath = '/media/uraplutonium/Workstation/Workspace/adtree-py/src/kdd10000DM.csv'
+
     
     ctFile = open(profPath + 'BIC_profile.csv', 'a')
     ctFile.writelines('ContabName,BIC_ncalls,BIC_cumtime,CT_ncalls,CT_cumtime,COUNT_ncalls,COUNT_cumtime\n')
@@ -201,3 +202,4 @@ if __name__ == '__main__':
 
     for eachCTInfo in ctInfoList:
         testBIC(irisDataPath, eachCTInfo[0], eachCTInfo[1], eachCTInfo[2])
+    

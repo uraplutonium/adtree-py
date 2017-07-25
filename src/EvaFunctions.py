@@ -42,15 +42,18 @@ def BIC(bn, dataset, use_adtree=False):
         if not parentsIndexList:
             continue
 
-        # calculate the contab1 for m1(mij*) according to the parentList
         contab1 = None
+        contab2 = None
         if use_adtree:
             bufList1 = parentsIndexList[:]
             bufList2 = parentsIndexList[:]
             bufList1.sort()
             bufList2.append(i)
             bufList2.sort()
+            # calculate the contab1 for m1(mij*) according to the parentList
             contab1 = EvaFunctions.ContingencyTable.ContingencyTable([v+1 for v in bufList1], adtree)
+            # calculate the contab2 for m1(mijk) according to the parentList.append(i) (bufList2)
+            contab2 = EvaFunctions.ContingencyTable.ContingencyTable([v+1 for v in bufList2], adtree)
             
         #print("start computing for node " + eachNode.name)
         
@@ -86,10 +89,6 @@ def BIC(bn, dataset, use_adtree=False):
             #print("mij* " + str(query) + " = " + str(m1))
             ###########################################
 
-            # calculate the contab2 for m1(mijk) according to the parentList.append(i) (bufList2)
-            contab2 = None
-            if use_adtree:
-                contab2 = EvaFunctions.ContingencyTable.ContingencyTable([v+1 for v in bufList2], adtree)
             # the third summation for each value of the current node
             for eachValueIndex in range(0, dataset.getArityList()[i]):
                 tmpQuery = query
