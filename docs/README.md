@@ -2,7 +2,7 @@
 When using this package, each of “Record”, “ADTree” and “ContingencyTable” modules must be imported to program. However, there are more than one
 implementations for each of these three modules. As a result, please consider which implementations is more appropriate before importing.
 
-Note: The name of the folder where all python files are, must not be “adtree” or “ADTree”, since some AD-Tree modules are imported as this name. A folder with name of “adtree” or “ADTree” will cause this package does not work.
+Note: The name of the folder where all python files are, must not be “adtree” or “ADTree”, since some AD-Tree modules are imported as this name. A folder with name of “adtree” or “ADTree” will cause the package does not work.
 
 ## 2. Record modules
 Record modules are the only form of original dataset the ADTree modules accept. It is a two-dimensional matrix, in which all numbers are greater than 0. In each row, there stores one record.
