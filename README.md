@@ -1,14 +1,3 @@
----
-layout: page
-title: adtree-py
-subtitle: A sparse all-dimensions tree tool-kit in Python for statistical machine learning acceleration
-bigimg: /img/adtree.jpeg
----
-
-[Introduction]: <> (What is adtree-py. Why build adtree-py. What it does. What it does not do.)
-
-[Manual]: <> (How to install it. How to use it. Examples/Demos.)
-
 ## 1. Introduction for Record, AD-Tree and Contingency Table modules
 When using this package, each of “Record”, “ADTree” and “ContingencyTable” modules must be imported to program. However, there are more than one
 implementations for each of these three modules. As a result, please consider which implementations is more appropriate before importing.
