@@ -9,6 +9,7 @@ bigimg: /img/adtree.jpeg
 
 [Manual]: <> (How to install it. How to use it. Examples/Demos.)
 
+
 # Sparse AD-Tree package in Python
 
 ## 1. Introduction for Record, AD-Tree and Contingency Table modules
