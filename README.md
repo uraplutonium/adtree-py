@@ -1,3 +1,14 @@
+---
+layout: page
+title: adtree-py
+subtitle: A sparse all-dimensions tree tool-kit in Python for statistical machine learning acceleration
+bigimg: /img/adtree.jpeg
+---
+
+[Introduction]: <> (What is adtree-py. Why build adtree-py. What it does. What it does not do.)
+
+[Manual]: <> (How to install it. How to use it. Examples/Demos.)
+
 # Sparse AD-Tree package in Python
 
 ## 1. Introduction for Record, AD-Tree and Contingency Table modules
@@ -224,3 +235,5 @@ Q: [2, 1] C: 1
 Q: [3, 1] C: 1
 Q: [4, 1] C: 0
 ```
+
+[Wiki]: <> (How adtree-py works. What does it contain.)
